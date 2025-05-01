@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="map_field.MapField">
+        <div class="d-flex align-items-center gap-2">
+            <div t-att-class="'bg-white p-1 bg-opacity-75' + (this.state.longitude ? '' : ' d-none')">
+                <span>Longitude:</span>
+                <span t-esc="this.state.longitude"/>
+            </div>
+            <div t-att-class="'bg-white p-1 bg-opacity-75 pe-2' + (this.state.latitude ? '' : ' d-none')">
+                <span>Latitude:</span>
+                <span t-esc="this.state.latitude"/>
+            </div>
+            <button class="btn btn-secondary mx-2" t-on-click="openMap">
+                Open Map
+            </button>
+        </div>
+
+        <t t-if="this.state.showMap">
+            <div class="backdrop"/>
+            <div class="map-dialog d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between pt-3 px-2">
+                    <h4 class="fw-medium px-2">
+                        Map View - Select Location
+                    </h4>
+                    <a class="btn btn-link" t-on-click.prevent="closeMap">
+                        <i class="fa fa-times fw-bold fs-3 text-black"/>
+                    </a>
+                </div>
+                <div style="width: 98%" class="border mx-2 my-2"/>
+                <div class="pt-2 h-100 w-100">
+                    <div class="map_field mx-auto h-100" t-ref="map"/>
+                    <div t-if="!this.props.readonly" class="map_field-buttons position-absolute bottom-0 end-0 me-4">
+                        <button class="btn btn-danger" t-on-click="deleteDialog">Delete Location</button>
+                        <button class="btn btn-primary ms-2" t-on-click="getCurrentLocation">
+                            <i class="fa fa-map-marker"/>
+                        </button>
+                    </div>
+                    <div t-if="this.state.longitude and this.state.latitude" class="map_field-info position-absolute bottom-0 d-flex justify-conetnt-center mx-auto">
+                        <div class="bg-white p-1 bg-opacity-75">
+                            <span>Longitude : </span>
+                            <span t-esc="this.state.longitude"/>
+                        </div>
+                        <div class="bg-white p-1 bg-opacity-75 pe-2">
+                            <span>Latitude : </span>
+                            <span t-esc="this.state.latitude"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+</templates>

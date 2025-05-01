@@ -1,0 +1,40 @@
+
+.map-field-container {
+    width: 99%;
+  }
+  
+  .map_field-info{
+    z-index: 401; 
+    height: 30px;
+  }
+
+  .map_field-buttons{
+    z-index: 402; 
+    margin-bottom: 30px;
+  }
+  .marker_color{
+    filter: hue-rotate(255deg)
+  }
+  
+  .map-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff; 
+    border-radius: 6px;
+    width: 87%;
+    height: 90%;
+    z-index: 100; 
+    overflow: hidden;
+  
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0);
+      z-index: 999;
+    }
+  }
