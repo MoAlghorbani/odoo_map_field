@@ -15,5 +15,6 @@
             "odoo_map_field/static/src/**/*",
         ],
     },
+    "images": ['static/description/banner.png'],
     "license": "OPL-1",
 }
