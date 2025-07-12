@@ -23,8 +23,8 @@ export class MapField extends Component {
         onWillStart(async () => {
             await loadJS("https://unpkg.com/leaflet@1.9.4/dist/leaflet.js")
             await loadCSS("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css")
-            await loadJS("/map_field/static/lib/leaflet-geocoder.js")
-            await loadCSS("/map_field/static/lib/leaflet-geocoder.css")
+            await loadJS("/odoo_map_field/static/lib/leaflet-geocoder.js")
+            await loadCSS("/odoo_map_field/static/lib/leaflet-geocoder.css")
             const x = await this.orm.searchRead("res.config.settings", [], ['latitude_conf', 'longitude_conf', 'country_code_conf'])
             if (x.at(-1) && 'latitude_conf' in x.at(-1)) {
                 this.state.latitude_conf = x.at(-1).latitude_conf || "31.77805412782377"
@@ -153,7 +153,7 @@ MapField.props = {
     latitude: { type: Number, optional: true },
     longitude: { type: Number, optional: true },
 };
-MapField.template = "map_field.MapField";
+MapField.template = "odoo_map_field.MapField";
 
 export const mapField = {
     component: MapField,

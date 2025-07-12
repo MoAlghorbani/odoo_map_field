@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="map_field.MapField">
+    <t t-name="odoo_map_field.MapField">
         <div class="d-flex align-items-center gap-2">
             <div t-att-class="'bg-white p-1 bg-opacity-75' + (this.state.longitude ? '' : ' d-none')">
                 <span>Longitude:</span>
