@@ -101,71 +101,109 @@
 </head>
 
 <body>
-    <section class="container">
-        <div class="header">
-            <h1>Map Field for Odoo</h1>
-            <p>A powerful and flexible map field widget for Odoo 17.0</p>
-        </div>
-        
-        <div class="badge-container">
+    <section style="padding: 5px;" class="container">
+        <div class="d-flex gap-1">
             <span>Support for: </span>
-            <span class="badge">Community</span>
-            <span class="badge">Enterprise</span>
+            <span style="background-color: #017E84 !important;
+    font-size: 0.8rem !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    padding: 4px !important;
+    margin: 0 3px !important;
+    border-radius: 50px !important;
+    text-align: center;
+    min-width: 120px !important;">
+                Community
+            </span>
+            <span style="background-color: #017E84 !important;
+    font-size: 0.8rem !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    padding: 4px !important;
+    margin: 0 3px !important;
+    border-radius: 50px !important;
+    text-align: center;
+    min-width: 120px !important;">
+                Enterprise
+            </span>
         </div>
-
-        <div class="section">
-            <h2>Overview</h2>
-            <p>The Map Field module provides a powerful and intuitive way to store and display geographical locations in your Odoo applications. This field allows users to select locations on an interactive map, search for addresses, get their current location, and more - all without requiring any external API keys.</p>
+    </section>
+    <section class="container">
+        <div class="row oe_spaced">
+            <h1>Map Field for Odoo</h1>
+            <p>A powerful and flexible map field widget</p>
         </div>
+    </section>
+    <section style="display: flex;" class="container">
+        <img class="mx-auto" src="./preview.gif" />
+    </section>
+    
+    <section class="section">    
+        <h2>Overview</h2>
+        <p>The Map Field module provides a powerful and intuitive way to store and display geographical locations in your Odoo applications. This field allows users to select locations on an interactive map, search for addresses, get their current location, and more - all without requiring any external API keys.</p>
+    </section>
+    
 
-        <div class="section">
-            <h2>Key Features</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Location Sear
-                        ch</h3>
+    <section class="section">
+        <h2>Key Features</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <div style="font-size: 24px; margin-bottom: 15px; color: #017E84;">🔍</div>
+                    <h3 style="color: #017E84; margin-top: 0;">Location Search</h3>
                     <p>Built-in search functionality allows users to find addresses and locations quickly without leaving the form.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Current Location</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <div style="font-size: 24px; margin-bottom: 15px; color: #017E84;">📍</div>
+                    <h3 style="color: #017E84; margin-top: 0;">Current Location</h3>
                     <p>One-click button to automatically detect and set the user's current geographical location.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Default Location</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <div style="font-size: 24px; margin-bottom: 15px; color: #017E84;">⚙️</div>
+                    <h3 style="color: #017E84; margin-top: 0;">Default Location</h3>
                     <p>Set default location coordinates and country code in the settings for a better user experience.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>No API Key Required</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <div style="font-size: 24px; margin-bottom: 15px; color: #017E84;">🌍</div>
+                    <h3 style="color: #017E84; margin-top: 0;">No API Key Required</h3>
+                    <p>Uses OpenStreetMap for map rendering without requiring any external API keys.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Interactive Map</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <div style="font-size: 24px; margin-bottom: 15px; color: #017E84;">🔄</div>
+                    <h3 style="color: #017E84; margin-top: 0;">Interactive Map</h3>
                     <p>Click anywhere on the map to set a location marker and automatically save the coordinates.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Country Filtering</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+                <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; height: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <div style="font-size: 24px; margin-bottom: 15px; color: #017E84;">🔒</div>
+                    <h3 style="color: #017E84; margin-top: 0;">Country Filtering</h3>
                     <p>Restrict location searches to specific countries for more relevant results.</p>
                 </div>
             </div>
         </div>
-
-        <div class="section">
-            <h2>Settings</h2>
-            <p>Configure you default location</p>
-            <p>Configure you default country code (For search)</p>
-            <img src="./setting.png" alt="Settings">
-        </div>
-
-        <div class="section">
-            <h2>Support</h2>
-            <p><strong>Email:</strong> amt.dev.code@gmail.com</p>
-        </div>
     </section>
+
+    <div class="section">
+        <h2>Settings</h2>
+        <p>Configure you default location</p>
+        <p>Configure you default country code (For search)</p>
+        <img src="./setting.png" alt="Settings">
+    </div>
+
+    <div class="section">
+        <h2>Support</h2>
+        <p><strong>Email:</strong> amt.dev.code@gmail.com</p>
+    </div>
+
 </body>
 
 </html>
